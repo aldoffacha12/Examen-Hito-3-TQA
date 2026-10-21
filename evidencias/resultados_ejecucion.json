@@ -1,0 +1,116 @@
+[
+  {
+    "tc": "TC-01",
+    "step": "Acceso con credenciales válidas",
+    "ok": true,
+    "detail": "URL tras iniciar sesión: https://www.saucedemo.com/inventory.html"
+  },
+  {
+    "tc": "TC-01",
+    "step": "Catálogo de productos visible",
+    "ok": true,
+    "detail": "6 productos visibles. Badge de carrito: ausente (carrito vacío)"
+  },
+  {
+    "tc": "TC-02",
+    "step": "Mensaje de error por credenciales inválidas",
+    "ok": true,
+    "detail": "Mensaje mostrado: \"Epic sadface: Username and password do not match any user in this service\""
+  },
+  {
+    "tc": "TC-02",
+    "step": "Permanece en la pantalla de login (no accede al catálogo)",
+    "ok": true,
+    "detail": "URL: https://www.saucedemo.com/. Campos resaltados con error: 2"
+  },
+  {
+    "tc": "TC-03",
+    "step": "Agregar 2 productos al carrito",
+    "ok": true,
+    "detail": "Adds exitosos: true, true. Badge del carrito = 2 (esperado 2)"
+  },
+  {
+    "tc": "TC-03",
+    "step": "Los 2 productos figuran en el carrito",
+    "ok": true,
+    "detail": "Navegación: true. Items: 2 (Sauce Labs Backpack | Sauce Labs Bike Light). URL: https://www.saucedemo.com/cart.html"
+  },
+  {
+    "tc": "TC-03",
+    "step": "Eliminar un producto del carrito",
+    "ok": true,
+    "detail": "Clic en Remove: true. Badge = 1, items restantes = 1 (esperado 1 y 1). Queda: Sauce Labs Bike Light"
+  },
+  {
+    "tc": "TC-04",
+    "step": "Resumen del pedido con importes",
+    "ok": false,
+    "detail": "Campos: true,true,true. Resumen: true. Items: 0. Subtotal: Item total: $29.99. Impuesto: Tax: $2.40. Total: Total: $32.39"
+  },
+  {
+    "tc": "TC-04",
+    "step": "Confirmación de compra",
+    "ok": true,
+    "detail": "Mensaje: \"Thank you for your order!\". Imagen de confirmación: true. URL: https://www.saucedemo.com/checkout-complete.html"
+  },
+  {
+    "tc": "TC-05",
+    "step": "Validación de primer nombre vacío",
+    "ok": true,
+    "detail": "URL: https://www.saucedemo.com/checkout-step-one.html. Mensaje: \"Error: First Name is required\""
+  },
+  {
+    "tc": "TC-05",
+    "step": "Validación de apellido vacío",
+    "ok": true,
+    "detail": "Mensaje: \"Error: Last Name is required\""
+  },
+  {
+    "tc": "TC-05",
+    "step": "Validación de código postal vacío",
+    "ok": true,
+    "detail": "Mensaje: \"Error: Postal Code is required\""
+  },
+  {
+    "tc": "TC-05",
+    "step": "Validación de código postal no numérico",
+    "ok": false,
+    "detail": "Mensaje: \"\""
+  },
+  {
+    "tc": "TC-05",
+    "step": "Campos de nombre con solo espacios en blanco",
+    "ok": false,
+    "detail": "DEFECTO: avanzó al resumen con nombres de solo espacios → https://www.saucedemo.com/checkout-step-two.html"
+  },
+  {
+    "tc": "BUG-01",
+    "step": "Imágenes del catálogo con problem_user",
+    "ok": true,
+    "detail": "Productos: 6 con nombres distintos. Imágenes únicas: 1. Sauce Labs Backpack -> sl-404-Cq1a9k9X.jpg ; Sauce Labs Bike Light -> sl-404-Cq1a9k9X.jpg ; Sauce Labs Bolt T-Shirt -> sl-404-Cq1a9k9X.jpg ; Sauce Labs Fleece Jacket -> sl-404-Cq1a9k9X.jpg ; Sauce Labs Onesie -> sl-404-Cq1a9k9X.jpg ; Test.allTheThings() T-Shirt (Red) -> sl-404-Cq1a9k9X.jpg"
+  },
+  {
+    "tc": "BUG-01",
+    "step": "Contraste con standard_user",
+    "ok": true,
+    "detail": "standard_user: 6 imágenes distintas entre 6 productos"
+  },
+  {
+    "tc": "EXPLOR",
+    "step": "Agregar al carrito con error_user",
+    "ok": true,
+    "detail": "Badge inicial: ausente. Clic en Add to cart → badge: 1. Botón ítem 1 tras clic: \"Remove\""
+  },
+  {
+    "tc": "BUG-02",
+    "step": "Carrito tras cerrar sesión y entrar con otro usuario",
+    "ok": false,
+    "detail": "Menú abierto: true. standard_user agregó (badge=1). Tras Logout y login de performance_glitch_user: badge=1 → el carrito del usuario anterior PERSISTE (defecto de aislamiento entre sesiones)"
+  },
+  {
+    "tc": "EXTRA",
+    "step": "Ordenamiento Price low to high",
+    "ok": true,
+    "detail": "Precios: 7.99, 9.99, 15.99, 15.99, 29.99, 49.99"
+  }
+]
