@@ -71,6 +71,6 @@ Examen-Hito-3-TQA/
 ## Prácticas de Git usadas en este trabajo
 
 - Historial con **commits atómicos y descriptivos** (cada entrega en una rama/commit propio: documentación, ejecución, informe).
-- **Issues** de GitHub para el seguimiento de los defectos detectados (BUG-01, BUG-02, BUG-03).
-- **Project Board** con columnas To Do / In Progress / In Review / Done para visualizar el estado de las tareas del examen.
+- **Issues** de GitHub para el seguimiento de los defectos detectados (BUG-01, BUG-02, BUG-03): **PENDIENTE** (no se alcanzó a crearlos por tiempo; el contenido de cada issue está listo en `bugs/bugs_encontrados.md`).
+- **Project Board** con columnas To Do / In Progress / In Review / Done: **PENDIENTE** (no se alcanzó a crearlo por tiempo; el token disponible no tiene habilitado el scope `project`).
 - Trabajo desde **terminal** (`git init`, `git add`, `git commit`, `git remote`, `git push`).
